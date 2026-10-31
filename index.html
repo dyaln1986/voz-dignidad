@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Voice That Deserves to Be Heard</title>
+<style>
+:root {
+  --site-primary: #173B46;
+  --site-on-primary: #FFFFFF;
+  --site-secondary: #D8B978;
+  --site-on-secondary: #17252A;
+  --site-background: #101B20;
+  --site-on-background: #F4F0E7;
+  --site-font-body: Inter, ui-sans-serif, system-ui, sans-serif;
+  --site-font-heading: Georgia, 'Times New Roman', serif;
+  --site-heading-scale: 1;
+  --site-spacing-scale: 1;
+  --site-radius-scale: 1;
+  --site-decoration-opacity: 1;
+  color-scheme: light dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: var(--site-font-body); background: var(--site-background); color: var(--site-on-background); }
+#app { min-height: 100vh; width: 100%; background-color: var(--site-background); color: var(--site-on-background); border-radius: 0; overflow: hidden; }
+.topbar { display:flex; justify-content:space-between; align-items:center; padding: calc(22px * var(--site-spacing-scale)) clamp(20px,5vw,72px); border-bottom:1px solid #ffffff22; }
+.brand { letter-spacing:.16em; text-transform:uppercase; font-size:.72rem; color:var(--site-secondary); }
+.lang button { border:1px solid #ffffff40; background:transparent; color:var(--site-on-background); padding:9px 14px; border-radius:999px; cursor:pointer; }
+.hero { position:relative; padding: clamp(64px,10vw,128px) clamp(22px,9vw,130px) 76px; background:var(--site-primary); }
+.hero:after { content:""; position:absolute; width:260px; height:260px; right:5%; top:10%; border:1px solid #ffffff20; border-radius:50%; box-shadow:0 0 0 32px #ffffff08, 0 0 0 64px #ffffff05; opacity:var(--site-decoration-opacity); pointer-events:none; }
+.kicker { color:var(--site-secondary); text-transform:uppercase; letter-spacing:.2em; font-size:.72rem; font-weight:700; }
+h1,h2 { font-family:var(--site-font-heading); font-weight:500; }
+h1 { font-size:calc(clamp(2.8rem,7vw,6.4rem) * var(--site-heading-scale)); line-height:1.02; max-width:850px; margin:22px 0; }
+.lead { max-width:620px; line-height:1.8; color:#e5eceb; font-size:1.05rem; }
+.hero-mark { margin-top:42px; display:flex; align-items:center; gap:14px; color:var(--site-secondary); font-size:.82rem; letter-spacing:.08em; }
+.hero-mark span { width:42px; height:1px; background:var(--site-secondary); }
+main { max-width:1100px; margin:auto; padding:70px 24px 90px; }
+.intro { display:grid; grid-template-columns:1fr 1.4fr; gap:48px; align-items:start; }
+h2 { font-size:calc(2rem * var(--site-heading-scale)); margin:0 0 18px; }
+.copy { color:#c5d0ce; line-height:1.9; max-width:680px; }
+.panel { margin-top:54px; padding:clamp(24px,5vw,48px); background:#19282e; border:1px solid #ffffff20; border-radius:calc(18px * var(--site-radius-scale)); }
+.panel h2 { color:var(--site-secondary); }
+.principles { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:24px; }
+.principle { padding:22px; border-top:2px solid var(--site-secondary); background:#ffffff08; }
+.principle strong { display:block; margin-bottom:9px; }
+.principle p { color:#bdc9c7; line-height:1.65; font-size:.92rem; margin:0; }
+.note { margin-top:48px; border-left:3px solid var(--site-secondary); padding:4px 0 4px 20px; color:#c5d0ce; line-height:1.8; }
+footer { padding:28px 24px; text-align:center; color:#9caaa8; border-top:1px solid #ffffff20; font-size:.82rem; }
+[dir="rtl"] { text-align:right; }
+[dir="rtl"] .note { border-left:0; border-right:3px solid var(--site-secondary); padding:4px 20px 4px 0; }
+@media(max-width:700px) { .intro { grid-template-columns:1fr; gap:12px; } .principles { grid-template-columns:1fr; } .hero:after { width:140px;height:140px;right:-25px;top:15%; } }
+</style>
+</head>
+<body>
+<div id="app" data-sites-preview-theme="custom">
+<header class="topbar"><div class="brand" id="brand">A Voice for Dignity</div><div class="lang"><button id="toggle" type="button" aria-label="Switch language">العربية / English</button></div></header>
+<section class="hero" id="hero" dir="ltr">
+<div class="kicker" id="kicker">Colombia · A message of respect</div>
+<h1 id="headline">A voice that deserves to be heard.</h1>
+<p class="lead" id="lead">This space shares a message about dignity, safety, and every young person's right to be heard and protected.</p>
+<div class="hero-mark"><span></span><b id="signature">LISTEN · RESPECT · PROTECT</b></div>
+</section>
+<main id="content" dir="ltr">
+<section class="intro"><div><div class="kicker" id="sectiontag">MY MESSAGE</div><h2 id="storytitle">Speaking with dignity.</h2></div><p class="copy" id="story">I am a young person from Colombia, and I want my voice to be heard with respect. This site is a careful space to share my experience, seek guidance, and remind everyone that no young person should feel alone or unprotected.</p></section>
+<section class="panel"><div class="kicker" id="valuesTag">WHAT MATTERS</div><h2 id="valuesTitle">Safety, respect, and support.</h2><div class="principles"><article class="principle"><strong id="p1title">Being heard</strong><p id="p1">Everyone deserves to speak about what they have experienced without blame or humiliation.</p></article><article class="principle"><strong id="p2title">Protection</strong><p id="p2">The safety and privacy of young people must come first.</p></article><article class="principle"><strong id="p3title">Responsible support</strong><p id="p3">Seeking help from a trusted adult and the appropriate authorities can open a safer path forward.</p></article></div></section>
+<div class="note" id="privacy">For safety, this site does not publish addresses, phone numbers, names of minors, private conversations, or intimate material. It does not encourage anyone to contact, pursue, or attack another person.</div>
+</main>
+<footer id="foot">A message from Colombia · Dignity and protection for every young person</footer>
+</div>
+<script>
+const en={brand:'A Voice for Dignity',kicker:'Colombia · A message of respect',headline:'A voice that deserves to be heard.',lead:'This space shares a message about dignity, safety, and every young person’s right to be heard and protected.',signature:'LISTEN · RESPECT · PROTECT',sectiontag:'MY MESSAGE',storytitle:'Speaking with dignity.',story:'I am a young person from Colombia, and I want my voice to be heard with respect. This site is a careful space to share my experience, seek guidance, and remind everyone that no young person should feel alone or unprotected.',valuesTag:'WHAT MATTERS',valuesTitle:'Safety, respect, and support.',p1title:'Being heard',p1:'Everyone deserves to speak about what they have experienced without blame or humiliation.',p2title:'Protection',p2:'The safety and privacy of young people must come first.',p3title:'Responsible support',p3:'Seeking help from a trusted adult and the appropriate authorities can open a safer path forward.',privacy:'For safety, this site does not publish addresses, phone numbers, names of minors, private conversations, or intimate material. It does not encourage anyone to contact, pursue, or attack another person.',foot:'A message from Colombia · Dignity and protection for every young person'};
+const ar={brand:'صوت من أجل الكرامة',kicker:'كولومبيا · رسالة احترام',headline:'صوت يستحق أن يُسمع.',lead:'هذه مساحة لرسالة عن الكرامة والأمان وحق كل شاب وشابة في أن يُسمع صوتهم وأن يحظوا بالحماية.',signature:'الاستماع · الاحترام · الحماية',sectiontag:'رسالتي',storytitle:'التحدث بكرامة.',story:'أنا شاب من كولومبيا وأريد أن يُسمع صوتي باحترام. هذا الموقع مساحة آمنة وحذرة لمشاركة تجربتي وطلب الإرشاد، وللتذكير بأن أي شاب أو شابة لا ينبغي أن يشعر بالوحدة أو بانعدام الحماية.',valuesTag:'ما يهم',valuesTitle:'الأمان والاحترام والدعم.',p1title:'أن يُسمع صوتك',p1:'يستحق كل شخص أن يتحدث عمّا مرّ به دون لوم أو إهانة.',p2title:'الحماية',p2:'يجب أن تأتي سلامة الشباب وخصوصيتهم أولاً.',p3title:'دعم مسؤول',p3:'يمكن أن يكون طلب المساعدة من شخص بالغ موثوق والجهات المختصة بداية طريق أكثر أماناً.',privacy:'من أجل السلامة، لا ينشر هذا الموقع العناوين أو أرقام الهواتف أو أسماء القاصرين أو المحادثات الخاصة أو أي مواد حميمة. ولا يشجع أي شخص على التواصل مع أحد أو ملاحقته أو مهاجمته.',foot:'رسالة من كولومبيا · الكرامة والحماية لكل شاب وشابة'};
+let arabic=false;
+const ids=['brand','kicker','headline','lead','signature','sectiontag','storytitle','story','valuesTag','valuesTitle','p1title','p1','p2title','p2','p3title','p3','privacy','foot'];
+document.getElementById('toggle').addEventListener('click',()=>{arabic=!arabic;const d=arabic?ar:en;ids.forEach(id=>document.getElementById(id).textContent=d[id]);document.documentElement.lang=arabic?'ar':'en';document.getElementById('hero').dir=arabic?'rtl':'ltr';document.getElementById('content').dir=arabic?'rtl':'ltr';document.getElementById('brand').style.letterSpacing=arabic?'0':' .16em';});
+</script>
+</body>
+</html>
